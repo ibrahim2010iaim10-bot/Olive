@@ -4,240 +4,25 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>متجر زيت الزيتون</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #f4f4f4;
-      margin: 0;
-      padding: 0;
-      color: #333;
-    }
-
-    header {
-      background: #2e7d32;
-      color: white;
-      padding: 20px;
-      text-align: center;
-    }
-
-    header h1 {
-      margin: 0;
-      font-size: 28px;
-    }
-
-    nav {
-      text-align: center;
-      margin: 10px 0;
-    }
-
-    nav a {
-      text-decoration: none;
-      color: #2e7d32;
-      font-weight: bold;
-      margin: 0 15px;
-    }
-
-    .products {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      padding: 20px;
-    }
-
-    .product {
-      background: white;
-      border-radius: 10px;
-      margin: 15px;
-      padding: 15px;
-      width: 220px;
-      text-align: center;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-      transition: transform 0.2s;
-    }
-
-    .product:hover {
-      transform: scale(1.05);
-    }
-
-    .product img {
-      width: 100%;
-      height: auto;
-      border-radius: 10px;
-    }
-
-    button {
-      background: #2e7d32;
-      color: white;
-      border: none;
-      padding: 10px 20px;
-      border-radius: 5px;
-      cursor: pointer;
-      margin-top: 10px;
-    }
-
-    button:hover {
-      background: #1b5e20;
-    }
-
-    #cart {
-      position: fixed;
-      top: 20px;
-      right: 20px;
-      background: white;
-      border: 1px solid #ccc;
-      padding: 15px;
-      border-radius: 10px;
-      width: 250px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-    }
-
-    #cart h3 {
-      margin-top: 0;
-    }
-
-    #cartItems {
-      list-style: none;
-      padding: 0;
-      margin: 10px 0;
-      max-height: 150px;
-      overflow-y: auto;
-    }
-
-    #cartItems li {
-      margin-bottom: 5px;
-      font-size: 14px;
-    }
-
-    select {
-      padding: 5px;
-      width: 100%;
-      margin-bottom: 10px;
-    }
-
-    footer {
-      text-align: center;
-      padding: 20px;
-      background: #2e7d32;
-      color: white;
-      margin-top: 20px;
-    }
-
-    @media screen and (max-width: 600px) {
-      .products {
-        flex-direction: column;
-        align-items: center;
-      }
-
-      .product {
-        width: 90%;
-      }
-
-      #cart {
-        width: 90%;
-        right: 5%;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
 <header>
   <h1>متجر زيت الزيتون</h1>
 </header>
-
 <nav>
-  <a href="#products">المنتجات</a>
-  <a href="#cart">السلة</a>
-  <a href="#contact">اتصل بنا</a>
+  <a href="index.html">الرئيسية</a>
+  <a href="products.html">المنتجات</a>
+  <a href="cart.html">السلة</a>
+  <a href="contact.html">اتصل بنا</a>
 </nav>
-
-<div id="products" class="products">
-  <div class="product">
-    <img src="https://via.placeholder.com/220x150" alt="زيت زيتون بكر ممتاز">
-    <h2>زيت زيتون بكر ممتاز</h2>
-    <p>سعر: 150 جنيه</p>
-    <button onclick="addToCart('زيت زيتون بكر ممتاز',150)">أضف إلى السلة</button>
-  </div>
-  <div class="product">
-    <img src="https://via.placeholder.com/220x150" alt="زيت زيتون عضوي">
-    <h2>زيت زيتون عضوي</h2>
-    <p>سعر: 200 جنيه</p>
-    <button onclick="addToCart('زيت زيتون عضوي',200)">أضف إلى السلة</button>
-  </div>
-  <!-- اضف منتجات جديدة هنا بنفس الشكل -->
+<div class="container">
+  <h2>مرحبًا بك في متجرنا!</h2>
+  <p>أفضل أنواع زيت الزيتون البكر العضوي والطبيعي.</p>
+  <img src="https://via.placeholder.com/500x250" alt="زيت زيتون" style="width:100%;border-radius:10px;">
 </div>
-
-<div id="cart">
-  <h3>السلة</h3>
-  <ul id="cartItems"></ul>
-  <p>طريقة الدفع:</p>
-  <select id="paymentMethod">
-    <option value="cash">كاش عند التوصيل</option>
-    <option value="visa">فيزا</option>
-  </select>
-  <p id="totalPrice">إجمالي السعر: 0 جنيه</p>
-  <button onclick="checkout()">إرسال الطلب</button>
-</div>
-
-<div id="contact" style="padding:20px; margin-top:50px;">
-  <h2>اتصل بنا</h2>
-  <form onsubmit="contactForm(event)">
-    <input type="text" id="name" placeholder="اسمك" required style="width:100%;padding:8px;margin:5px 0;">
-    <input type="email" id="email" placeholder="بريدك الإلكتروني" required style="width:100%;padding:8px;margin:5px 0;">
-    <textarea id="message" placeholder="رسالتك" required style="width:100%;padding:8px;margin:5px 0;"></textarea>
-    <button type="submit">إرسال</button>
-  </form>
-</div>
-
 <footer>
   جميع الحقوق محفوظة &copy; 2025
 </footer>
-
-<script>
-  let cart = [];
-
-  function addToCart(name, price){
-    cart.push({name, price});
-    displayCart();
-  }
-
-  function displayCart(){
-    const cartItems = document.getElementById('cartItems');
-    const totalPrice = document.getElementById('totalPrice');
-    cartItems.innerHTML = '';
-    let total = 0;
-    cart.forEach((item, index) => {
-      const li = document.createElement('li');
-      li.textContent = `${item.name} - ${item.price} جنيه`;
-      cartItems.appendChild(li);
-      total += item.price;
-    });
-    totalPrice.textContent = `إجمالي السعر: ${total} جنيه`;
-  }
-
-  function checkout(){
-    if(cart.length === 0){
-      alert('السلة فارغة!');
-      return;
-    }
-    const paymentMethod = document.getElementById('paymentMethod').value;
-    let total = cart.reduce((sum, item) => sum + item.price, 0);
-    alert(`تم إرسال الطلب!\nطريقة الدفع: ${paymentMethod}\nإجمالي السعر: ${total} جنيه\nالمنتجات:\n${cart.map(i=>i.name).join(', ')}`);
-    cart = [];
-    displayCart();
-  }
-
-  function contactForm(event){
-    event.preventDefault();
-    const name = document.getElementById('name').value;
-    const email = document.getElementById('email').value;
-    const message = document.getElementById('message').value;
-    alert(`شكراً ${name}! تم استلام رسالتك.\nسوف نرد على: ${email}`);
-    document.getElementById('name').value='';
-    document.getElementById('email').value='';
-    document.getElementById('message').value='';
-  }
-</script>
-
 </body>
 </html>
