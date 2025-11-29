@@ -2,8 +2,8 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  direction: ltr;
-  text-align: left;
+  direction: rtl;
+  text-align: right;
 }
 
 .top-bar {
@@ -52,6 +52,12 @@ header nav a:hover {
   padding: 15px;
   text-align: center;
   border-radius: 5px;
+  width: 200px;
+}
+
+.product img {
+  max-width: 100%;
+  height: auto;
 }
 
 button {
@@ -83,5 +89,13 @@ button {
   margin-top: 20px;
   font-size: 18px;
   font-weight: bold;
+  text-align: center;
 }
 
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .products, .cart-items {
+    flex-direction: column;
+    align-items: center;
+  }
+}
