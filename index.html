@@ -1,24 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Olive Store</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Olivey</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <header class="navbar">
-    <h1 class="logo">Olive Store</h1>
+  <!-- Top bar with phone -->
+  <div class="top-bar">
+    For inquiries: <a href="tel:01018563500">01018563500</a>
+  </div>
+
+  <!-- Header -->
+  <header>
+    <h1>Olivey Store</h1>
     <nav>
-      <a href="cart.html" class="nav-link">Cart</a>
-      <a href="login.html" class="nav-link">Admin</a>
+      <a href="index.html">Home</a>
+      <a href="cart.html">Cart</a>
+      <a href="admin.html">Admin</a>
     </nav>
   </header>
 
-  <main>
-    <section id="products" class="products-grid"></section>
-  </main>
+  <!-- Products Section -->
+  <section class="products">
+    <div class="product">
+      <img src="images/product1.jpg" alt="Product 1">
+      <h3>Product 1</h3>
+      <p>$100</p>
+      <button class="add-to-cart">Add to Cart</button>
+    </div>
+    <div class="product">
+      <img src="images/product2.jpg" alt="Product 2">
+      <h3>Product 2</h3>
+      <p>$150</p>
+      <button class="add-to-cart">Add to Cart</button>
+    </div>
+    <!-- Add more products here -->
+  </section>
 
-  <script type="module" src="main.js"></script>
+  <script src="js/main.js" type="module"></script>
 </body>
 </html>
