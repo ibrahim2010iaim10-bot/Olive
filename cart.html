@@ -1,37 +1,43 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cart - Olivey</title>
+  <title>السلة - Olivey</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <div class="top-bar">
-    For inquiries: <a href="tel:01018563500">01018563500</a>
+    للاستفسار: <a href="tel:01018563500">01018563500</a>
   </div>
 
   <header>
-    <h1>Cart</h1>
+    <h1>السلة</h1>
     <nav>
-      <a href="index.html">Home</a>
-      <a href="cart.html">Cart</a>
-      <a href="admin.html">Admin</a>
+      <a href="index.html">الرئيسية</a>
+      <a href="products.html">المنتجات</a>
+      <a href="cart.html">السلة</a>
+      <a href="admin.html">الادمن</a>
     </nav>
   </header>
 
   <section class="cart-items">
-    <!-- Example cart item -->
     <div class="cart-item">
-      <span class="item-name">Product 1</span>
-      <span class="item-price">100$</span>
-      <button class="delete-btn">Delete</button>
+      <span class="item-name">منتج 1</span>
+      <span class="item-price">100 جنيه</span>
+      <button class="delete-btn">حذف</button>
+    </div>
+    <div class="cart-item">
+      <span class="item-name">منتج 2</span>
+      <span class="item-price">150 جنيه</span>
+      <button class="delete-btn">حذف</button>
     </div>
     <div class="cart-summary">
-      Total: <span id="cart-total">100$</span>
+      المجموع: <span id="cart-total">250 جنيه</span>
     </div>
   </section>
 
   <script src="js/main.js" type="module"></script>
 </body>
 </html>
+
