@@ -1,31 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Cart - Olive Store</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cart - Olivey</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <header class="navbar">
-    <h1 class="logo">Cart</h1>
-    <nav><a href="index.html" class="nav-link">Home</a></nav>
+  <div class="top-bar">
+    For inquiries: <a href="tel:01018563500">01018563500</a>
+  </div>
+
+  <header>
+    <h1>Cart</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="cart.html">Cart</a>
+      <a href="admin.html">Admin</a>
+    </nav>
   </header>
 
-  <main class="container">
-    <section id="cart-items" class="cart-list"></section>
+  <section class="cart-items">
+    <!-- Example cart item -->
+    <div class="cart-item">
+      <span class="item-name">Product 1</span>
+      <span class="item-price">100$</span>
+      <button class="delete-btn">Delete</button>
+    </div>
+    <div class="cart-summary">
+      Total: <span id="cart-total">100$</span>
+    </div>
+  </section>
 
-    <section class="checkout">
-      <h2>Complete your order</h2>
-      <form id="orderForm" class="order-form">
-        <input id="name" type="text" placeholder="Full name" required />
-        <input id="phone" type="text" placeholder="Phone number" required />
-        <input id="address" type="text" placeholder="Delivery address" required />
-        <button type="submit" class="btn">Submit Order</button>
-      </form>
-    </section>
-  </main>
-
-  <script type="module" src="main.js"></script>
+  <script src="js/main.js" type="module"></script>
 </body>
 </html>
